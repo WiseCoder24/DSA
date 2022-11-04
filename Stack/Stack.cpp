@@ -35,7 +35,7 @@ class stack{
         return arr[top];
     }
     bool isEmpty(){
-        return top=-1;
+        return top==-1;
     }
 };
 int main(){
