@@ -29,39 +29,39 @@ class Heap{
                 }
         }
 
-        int delete() {
+        // int delete() {
 
-                int ans  = arr[1];
-                //replace root node value with last node data
-                arr[1] = arr[size];
-                size--;
+        //         int ans  = arr[1];
+        //         //replace root node value with last node data
+        //         arr[1] = arr[size];
+        //         size--;
 
-                //place root node ka data on its correct position
-                int index = 1;
-                while(index < size) {
-                        int left = 2*index;
-                        int right = 2*index+1;
+        //         //place root node ka data on its correct position
+        //         int index = 1;
+        //         while(index < size) {
+        //                 int left = 2*index;
+        //                 int right = 2*index+1;
                         
-                        int largest = index;
+        //                 int largest = index;
 
-                        if(left < size && arr[largest] < arr[left] ) {
-                                largest = left;
-                        }
-                        if(right < size && arr[largest] < arr[right] ) {
-                                largest = right;
-                        }
+        //                 if(left < size && arr[largest] < arr[left] ) {
+        //                         largest = left;
+        //                 }
+        //                 if(right < size && arr[largest] < arr[right] ) {
+        //                         largest = right;
+        //                 }
 
-                        if(largest == index) {
-                                //value is atr correct position
-                                break; 
-                        }
-                        else {
-                                swap(arr[index], arr[largest]);
-                                index = largest;
-                        } 
-                }
-                return ans;
-        }
+        //                 if(largest == index) {
+        //                         //value is atr correct position
+        //                         break; 
+        //                 }
+        //                 else {
+        //                         swap(arr[index], arr[largest]);
+        //                         index = largest;
+        //                 } 
+        //         }
+        //         return ans;
+        // }
 };
 
 int main() {
@@ -81,7 +81,7 @@ int main() {
         h.insert(100);
 
   cout << "printing the heap " << endl;
-  for(int i=0; i<=h.size; i++) {
+  for(int i=1; i<=h.size; i++) {
           cout << h.arr[i] << " ";
   }cout << endl;
 
